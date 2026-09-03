@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="CurveDemoOO/CurveDemoOO.vcxproj" Id="0b335dbd-c524-42ba-abcb-c04b0545233a" />
+</Solution>
