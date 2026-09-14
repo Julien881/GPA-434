@@ -15,6 +15,7 @@
 int WinMain()
 {
     ezgame::Application application;
+    // ALO
     // application.run<...>();
     //                  ^----- la classe du GameEngine (pas un objet)
     //                         doit répondre aux exigences requises (voir la documentation)
