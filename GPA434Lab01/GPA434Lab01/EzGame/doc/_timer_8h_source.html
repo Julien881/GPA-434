@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EzGame:  Fichier source de Timer.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="EzGameLogoMedium.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">EzGame
+   </div>
+   <div id="projectbrief">La bibliothèque EzGame permet de créer facilement une application graphique rudimentaire.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef _EZGAME_TIMER_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define _EZGAME_TIMER_H_</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Inclusion des bibliothèques</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Déclaration du namespace ezgame</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceezgame.html">ezgame</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html">   27</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html#a75777d475d10de866c751bae0cfe82fe">   39</a></span>        int64_t <a class="code hl_function" href="classezgame_1_1_timer.html#a75777d475d10de866c751bae0cfe82fe">sinceLastTic</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html#a0bc025f53fbcbbb01856fd66a0a5db7d">   50</a></span>        int64_t <a class="code hl_function" href="classezgame_1_1_timer.html#a0bc025f53fbcbbb01856fd66a0a5db7d">sinceStartup</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html#ae9a3262bf8db8d8a1d109cc246681ddc">   63</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_timer.html#ae9a3262bf8db8d8a1d109cc246681ddc">secondSinceLastTic</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html#a47d7a9c3f8b34338ef6573dcae92d151">   78</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_timer.html#a47d7a9c3f8b34338ef6573dcae92d151">secondSinceStartup</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classezgame_1_1_timer.html#aca614c1536ccc8db0917e820e0e049bd">   91</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_timer.html#aca614c1536ccc8db0917e820e0e049bd">fpsEstimation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a>(<span class="keywordtype">size_t</span> framesUsedForFPS = 1000);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a>(<a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a>(<a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a>&amp; operator=(<a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a>&amp; operator=(<a class="code hl_class" href="classezgame_1_1_timer.html">Timer</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="classezgame_1_1_timer.html">~Timer</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classezgame_1_1_application.html">Application</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">struct </span>Impl;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        std::unique_ptr&lt;Impl&gt; mImpl;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">void</span> tic();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    };</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">// namespace ezgame</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif </span><span class="comment">// _EZGAME_TIMER_H_</span></div>
+<div class="ttc" id="aclassezgame_1_1_application_html"><div class="ttname"><a href="classezgame_1_1_application.html">ezgame::Application</a></div><div class="ttdoc">Constitue l'application elle-même.</div><div class="ttdef"><b>Definition</b> Application.h:116</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html"><div class="ttname"><a href="classezgame_1_1_timer.html">ezgame::Timer</a></div><div class="ttdoc">Classe utilitaire donnant accès à des métriques de temps écoulé.</div><div class="ttdef"><b>Definition</b> Timer.h:28</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html_a0bc025f53fbcbbb01856fd66a0a5db7d"><div class="ttname"><a href="classezgame_1_1_timer.html#a0bc025f53fbcbbb01856fd66a0a5db7d">ezgame::Timer::sinceStartup</a></div><div class="ttdeci">int64_t sinceStartup() const</div><div class="ttdoc">Retourne le temps écoulé depuis le démarrage de l'application en microseconde.</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html_a47d7a9c3f8b34338ef6573dcae92d151"><div class="ttname"><a href="classezgame_1_1_timer.html#a47d7a9c3f8b34338ef6573dcae92d151">ezgame::Timer::secondSinceStartup</a></div><div class="ttdeci">float secondSinceStartup() const</div><div class="ttdoc">Retourne le temps écoulé depuis le démarrage de l'application en seconde.</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html_a75777d475d10de866c751bae0cfe82fe"><div class="ttname"><a href="classezgame_1_1_timer.html#a75777d475d10de866c751bae0cfe82fe">ezgame::Timer::sinceLastTic</a></div><div class="ttdeci">int64_t sinceLastTic() const</div><div class="ttdoc">Retourne le temps écoulé depuis le dernier tic en microseconde.</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html_aca614c1536ccc8db0917e820e0e049bd"><div class="ttname"><a href="classezgame_1_1_timer.html#aca614c1536ccc8db0917e820e0e049bd">ezgame::Timer::fpsEstimation</a></div><div class="ttdeci">float fpsEstimation() const</div><div class="ttdoc">Retourne une estimation du nombre de tic par seconde moyen (frame per second).</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html_ae9a3262bf8db8d8a1d109cc246681ddc"><div class="ttname"><a href="classezgame_1_1_timer.html#ae9a3262bf8db8d8a1d109cc246681ddc">ezgame::Timer::secondSinceLastTic</a></div><div class="ttdeci">float secondSinceLastTic() const</div><div class="ttdoc">Retourne le temps écoulé depuis le dernier tic en seconde.</div></div>
+<div class="ttc" id="anamespaceezgame_html"><div class="ttname"><a href="namespaceezgame.html">ezgame</a></div><div class="ttdoc">Le namespace ezgame réuni l'ensemble de la librairie EzGame.</div><div class="ttdef"><b>Definition</b> Alignment.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

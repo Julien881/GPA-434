@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EzGame:  Fichier source de Circle.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="EzGameLogoMedium.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">EzGame
+   </div>
+   <div id="projectbrief">La bibliothèque EzGame permet de créer facilement une application graphique rudimentaire.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Circle.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef _EZGAME_CIRCLE_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define _EZGAME_CIRCLE_H_</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Inclusion des bibliothèques</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Vect2d.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Alignment.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Color.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Déclaration du namespace ezgame</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceezgame.html">ezgame</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html">   28</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a7d2487ac75ecfc57be0b37a9828330b3">   42</a></span>        <a class="code hl_function" href="classezgame_1_1_circle.html#a7d2487ac75ecfc57be0b37a9828330b3">Circle</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a52f637b8b243141bcf55bdb316caca1d">   58</a></span>        <a class="code hl_function" href="classezgame_1_1_circle.html#a52f637b8b243141bcf55bdb316caca1d">Circle</a>(<span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">radius</a>, <a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">position</a>, <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span> color = <a class="code hl_variable" href="classezgame_1_1_color.html#a753f0abcf04ab1600ece77bfc223c411">Color::White</a>, <a class="code hl_enumeration" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">Alignment</a> <a class="code hl_function" href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">alignment</a> = <a class="code hl_enumvalue" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75a42b56788639363ade366287d21b793bc">Alignment::CenterCenter</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a97efcc2d6a92dbc954342aca36a349fc">   76</a></span>        <a class="code hl_function" href="classezgame_1_1_circle.html#a97efcc2d6a92dbc954342aca36a349fc">Circle</a>(<span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">radius</a>, <a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">position</a>, <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">fillColor</a>, <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span> <a class="code hl_function" href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">edgeColor</a>, <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a23faf18ebc77cd80367decbcee065133">edgeSize</a> = 1.0f, <a class="code hl_enumeration" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">Alignment</a> <a class="code hl_function" href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">alignment</a> = <a class="code hl_enumvalue" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75a42b56788639363ade366287d21b793bc">Alignment::CenterCenter</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="classezgame_1_1_circle.html#a7d2487ac75ecfc57be0b37a9828330b3">Circle</a>(<a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a> <span class="keyword">const</span>&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="classezgame_1_1_circle.html#a7d2487ac75ecfc57be0b37a9828330b3">Circle</a>(<a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a> &amp;&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a>&amp; operator=(<a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a> <span class="keyword">const</span>&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a>&amp; operator=(<a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a> &amp;&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="classezgame_1_1_circle.html">~Circle</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">   91</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">radius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">   99</a></span>        <a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> <a class="code hl_function" href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">  105</a></span>        <a class="code hl_enumeration" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">Alignment</a> <a class="code hl_function" href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">alignment</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">  111</a></span>        <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <a class="code hl_function" href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">fillColor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">  117</a></span>        <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <a class="code hl_function" href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">edgeColor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a23faf18ebc77cd80367decbcee065133">  123</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a23faf18ebc77cd80367decbcee065133">edgeSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a127d69c6090c650bb2ccb4953e8f106d">  149</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a127d69c6090c650bb2ccb4953e8f106d">isColliding</a>(<a class="code hl_class" href="classezgame_1_1_circle.html">Circle</a> <span class="keyword">const</span>&amp; otherCircle) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#ad3a07a96ec2a66d9edabb9a565dd490d">  157</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ad3a07a96ec2a66d9edabb9a565dd490d">setRadius</a>(<span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">radius</a>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a232b23b81507336d56df6e6588abb3da">  163</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a232b23b81507336d56df6e6588abb3da">setPosition</a>(<a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">position</a>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#ade38ba4e84ef62c4d8f67a2260053212">  169</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ade38ba4e84ef62c4d8f67a2260053212">setAlignment</a>(<a class="code hl_enumeration" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">Alignment</a> <a class="code hl_function" href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">alignment</a>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a94d58763095722c80f494f417d608d8d">  175</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a94d58763095722c80f494f417d608d8d">setFill</a>(<a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; color);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#abaa814e5fab4cd5cb3b08ba5ee832488">  181</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#abaa814e5fab4cd5cb3b08ba5ee832488">setNoFill</a>();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#aa742d6143e8ebc4813962c2b03d7c46c">  187</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#aa742d6143e8ebc4813962c2b03d7c46c">setEdge</a>(<a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; color);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#aafe517a167cb47dd964892a74b041039">  193</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#aafe517a167cb47dd964892a74b041039">setEdge</a>(<span class="keywordtype">float</span> size);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#af090c9ee58ca3dd86203408ed6cd3633">  201</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#af090c9ee58ca3dd86203408ed6cd3633">setEdge</a>(<a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; color, <span class="keywordtype">float</span> size);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a5966419d57084526c57872884092f552">  208</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a5966419d57084526c57872884092f552">setNoEdge</a>();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a05a3407739601f5bc2b14efe62289b7c">  216</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a05a3407739601f5bc2b14efe62289b7c">setColors</a>(<a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">fillColor</a>, <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">edgeColor</a>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#a1918347ae0a8eec9548483fab6bea240">  225</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a1918347ae0a8eec9548483fab6bea240">setColors</a>(<a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">fillColor</a>, <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">edgeColor</a>, <span class="keywordtype">float</span> <a class="code hl_function" href="classezgame_1_1_circle.html#a23faf18ebc77cd80367decbcee065133">edgeSize</a>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#aa90b4f550c305dc56a227e30b62d5c40">  236</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#aa90b4f550c305dc56a227e30b62d5c40">adjustSize</a>(<span class="keywordtype">float</span> relativeSize);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classezgame_1_1_circle.html#ab3d253d06ca05911d4a284435b9d9993">  246</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classezgame_1_1_circle.html#ab3d253d06ca05911d4a284435b9d9993">move</a>(<a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> <span class="keyword">const</span>&amp; displacement);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keyword">static</span> <span class="keywordtype">float</span> <span class="keyword">const</span> smMinimumRadius;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keywordtype">float</span> mRadius;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <a class="code hl_class" href="classezgame_1_1_vect2d.html">Vect2d</a> mPosition;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <a class="code hl_enumeration" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">Alignment</a> mAlignment;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> mFillColor;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <a class="code hl_class" href="classezgame_1_1_color.html">Color</a> mEdgeColor;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordtype">float</span> mEdgeSize;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    };</div>
+</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>} <span class="comment">// namespace ezgame</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#endif </span><span class="comment">// _EZGAME_CIRCLE_H_</span></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html"><div class="ttname"><a href="classezgame_1_1_circle.html">ezgame::Circle</a></div><div class="ttdoc">Classe représentant un cercle.</div><div class="ttdef"><b>Definition</b> Circle.h:29</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a05a3407739601f5bc2b14efe62289b7c"><div class="ttname"><a href="classezgame_1_1_circle.html#a05a3407739601f5bc2b14efe62289b7c">ezgame::Circle::setColors</a></div><div class="ttdeci">void setColors(Color const &amp;fillColor, Color const &amp;edgeColor)</div><div class="ttdoc">Mutateur des couleurs de remplissage et de la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a127d69c6090c650bb2ccb4953e8f106d"><div class="ttname"><a href="classezgame_1_1_circle.html#a127d69c6090c650bb2ccb4953e8f106d">ezgame::Circle::isColliding</a></div><div class="ttdeci">bool isColliding(Circle const &amp;otherCircle) const</div><div class="ttdoc">Fonction utilitaire retournant si ce cercle entre en collision avec au autre cercle.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a1918347ae0a8eec9548483fab6bea240"><div class="ttname"><a href="classezgame_1_1_circle.html#a1918347ae0a8eec9548483fab6bea240">ezgame::Circle::setColors</a></div><div class="ttdeci">void setColors(Color const &amp;fillColor, Color const &amp;edgeColor, float edgeSize)</div><div class="ttdoc">Mutateur des couleurs de remplissage et de bordure, ainsi que la taille de la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a232b23b81507336d56df6e6588abb3da"><div class="ttname"><a href="classezgame_1_1_circle.html#a232b23b81507336d56df6e6588abb3da">ezgame::Circle::setPosition</a></div><div class="ttdeci">void setPosition(Vect2d const &amp;position)</div><div class="ttdoc">Mutateur de la position du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a23faf18ebc77cd80367decbcee065133"><div class="ttname"><a href="classezgame_1_1_circle.html#a23faf18ebc77cd80367decbcee065133">ezgame::Circle::edgeSize</a></div><div class="ttdeci">float edgeSize() const</div><div class="ttdoc">Accesseur retournant la taille de la bordure.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a2fd3eee1b74cf5e2a5a4326a721c875e"><div class="ttname"><a href="classezgame_1_1_circle.html#a2fd3eee1b74cf5e2a5a4326a721c875e">ezgame::Circle::alignment</a></div><div class="ttdeci">Alignment alignment() const</div><div class="ttdoc">Accesseur retournant l'alignement.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a52f637b8b243141bcf55bdb316caca1d"><div class="ttname"><a href="classezgame_1_1_circle.html#a52f637b8b243141bcf55bdb316caca1d">ezgame::Circle::Circle</a></div><div class="ttdeci">Circle(float radius, Vect2d const &amp;position, Color const color=Color::White, Alignment alignment=Alignment::CenterCenter)</div><div class="ttdoc">Constructeur initialisant les attributs d'un objet cercle sans bordure.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a5966419d57084526c57872884092f552"><div class="ttname"><a href="classezgame_1_1_circle.html#a5966419d57084526c57872884092f552">ezgame::Circle::setNoEdge</a></div><div class="ttdeci">void setNoEdge()</div><div class="ttdoc">Supprime la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a7d2487ac75ecfc57be0b37a9828330b3"><div class="ttname"><a href="classezgame_1_1_circle.html#a7d2487ac75ecfc57be0b37a9828330b3">ezgame::Circle::Circle</a></div><div class="ttdeci">Circle()</div><div class="ttdoc">Constructeur par défaut.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a94d58763095722c80f494f417d608d8d"><div class="ttname"><a href="classezgame_1_1_circle.html#a94d58763095722c80f494f417d608d8d">ezgame::Circle::setFill</a></div><div class="ttdeci">void setFill(Color const &amp;color)</div><div class="ttdoc">Mutateur de la couleur de remplissage du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_a97efcc2d6a92dbc954342aca36a349fc"><div class="ttname"><a href="classezgame_1_1_circle.html#a97efcc2d6a92dbc954342aca36a349fc">ezgame::Circle::Circle</a></div><div class="ttdeci">Circle(float radius, Vect2d const &amp;position, Color const fillColor, Color const edgeColor, float edgeSize=1.0f, Alignment alignment=Alignment::CenterCenter)</div><div class="ttdoc">Constructeur initialisant les attributs d'un objet cercle.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_aa742d6143e8ebc4813962c2b03d7c46c"><div class="ttname"><a href="classezgame_1_1_circle.html#aa742d6143e8ebc4813962c2b03d7c46c">ezgame::Circle::setEdge</a></div><div class="ttdeci">void setEdge(Color const &amp;color)</div><div class="ttdoc">Mutateur de la couleur de la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_aa90b4f550c305dc56a227e30b62d5c40"><div class="ttname"><a href="classezgame_1_1_circle.html#aa90b4f550c305dc56a227e30b62d5c40">ezgame::Circle::adjustSize</a></div><div class="ttdeci">void adjustSize(float relativeSize)</div><div class="ttdoc">Mutateur relatif du rayon.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_aafe517a167cb47dd964892a74b041039"><div class="ttname"><a href="classezgame_1_1_circle.html#aafe517a167cb47dd964892a74b041039">ezgame::Circle::setEdge</a></div><div class="ttdeci">void setEdge(float size)</div><div class="ttdoc">Mutateur de la taille de la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_ab3d253d06ca05911d4a284435b9d9993"><div class="ttname"><a href="classezgame_1_1_circle.html#ab3d253d06ca05911d4a284435b9d9993">ezgame::Circle::move</a></div><div class="ttdeci">void move(Vect2d const &amp;displacement)</div><div class="ttdoc">Déplace du cercle.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_abaa814e5fab4cd5cb3b08ba5ee832488"><div class="ttname"><a href="classezgame_1_1_circle.html#abaa814e5fab4cd5cb3b08ba5ee832488">ezgame::Circle::setNoFill</a></div><div class="ttdeci">void setNoFill()</div><div class="ttdoc">Supprime la couleur de remplissage du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_abd35ae310cbbe18a749827777daba011"><div class="ttname"><a href="classezgame_1_1_circle.html#abd35ae310cbbe18a749827777daba011">ezgame::Circle::edgeColor</a></div><div class="ttdeci">Color edgeColor() const</div><div class="ttdoc">Accesseur retournant la couleur de la bordure.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_ac2e70c8e6303ae7824d32fc4c9616285"><div class="ttname"><a href="classezgame_1_1_circle.html#ac2e70c8e6303ae7824d32fc4c9616285">ezgame::Circle::fillColor</a></div><div class="ttdeci">Color fillColor() const</div><div class="ttdoc">Accesseur retournant la couleur de remplissage.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_ad3a07a96ec2a66d9edabb9a565dd490d"><div class="ttname"><a href="classezgame_1_1_circle.html#ad3a07a96ec2a66d9edabb9a565dd490d">ezgame::Circle::setRadius</a></div><div class="ttdeci">void setRadius(float radius)</div><div class="ttdoc">Mutateur du rayon.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_ade38ba4e84ef62c4d8f67a2260053212"><div class="ttname"><a href="classezgame_1_1_circle.html#ade38ba4e84ef62c4d8f67a2260053212">ezgame::Circle::setAlignment</a></div><div class="ttdeci">void setAlignment(Alignment alignment)</div><div class="ttdoc">Mutateur de l'alignement du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_ae3baeda7261f17ecfd940101408bdb0f"><div class="ttname"><a href="classezgame_1_1_circle.html#ae3baeda7261f17ecfd940101408bdb0f">ezgame::Circle::radius</a></div><div class="ttdeci">float radius() const</div><div class="ttdoc">Accesseur retournant le rayon.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_af090c9ee58ca3dd86203408ed6cd3633"><div class="ttname"><a href="classezgame_1_1_circle.html#af090c9ee58ca3dd86203408ed6cd3633">ezgame::Circle::setEdge</a></div><div class="ttdeci">void setEdge(Color const &amp;color, float size)</div><div class="ttdoc">Mutateur de la couleur et de la taille de la bordure du texte.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html_af40556f6237e2ed8d896f05202776186"><div class="ttname"><a href="classezgame_1_1_circle.html#af40556f6237e2ed8d896f05202776186">ezgame::Circle::position</a></div><div class="ttdeci">Vect2d position() const</div><div class="ttdoc">Accesseur retournant la position.</div></div>
+<div class="ttc" id="aclassezgame_1_1_color_html"><div class="ttname"><a href="classezgame_1_1_color.html">ezgame::Color</a></div><div class="ttdoc">Classe représentant une couleur.</div><div class="ttdef"><b>Definition</b> Color.h:73</div></div>
+<div class="ttc" id="aclassezgame_1_1_color_html_a753f0abcf04ab1600ece77bfc223c411"><div class="ttname"><a href="classezgame_1_1_color.html#a753f0abcf04ab1600ece77bfc223c411">ezgame::Color::White</a></div><div class="ttdeci">static Color const White</div><div class="ttdoc">Couleur prédéfinie  blanc</div><div class="ttdef"><b>Definition</b> Color.h:616</div></div>
+<div class="ttc" id="aclassezgame_1_1_vect2d_html"><div class="ttname"><a href="classezgame_1_1_vect2d.html">ezgame::Vect2d</a></div><div class="ttdoc">Classe modélisant un vecteur bidimensionnel dans un espace euclidien.</div><div class="ttdef"><b>Definition</b> Vect2d.h:90</div></div>
+<div class="ttc" id="anamespaceezgame_html"><div class="ttname"><a href="namespaceezgame.html">ezgame</a></div><div class="ttdoc">Le namespace ezgame réuni l'ensemble de la librairie EzGame.</div><div class="ttdef"><b>Definition</b> Alignment.h:7</div></div>
+<div class="ttc" id="anamespaceezgame_html_afd3624324e5bdf9ff2084d6112ad8a75"><div class="ttname"><a href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75">ezgame::Alignment</a></div><div class="ttdeci">Alignment</div><div class="ttdoc">Définit l'alignement des objets graphiques.</div><div class="ttdef"><b>Definition</b> Alignment.h:24</div></div>
+<div class="ttc" id="anamespaceezgame_html_afd3624324e5bdf9ff2084d6112ad8a75a42b56788639363ade366287d21b793bc"><div class="ttname"><a href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75a42b56788639363ade366287d21b793bc">ezgame::Alignment::CenterCenter</a></div><div class="ttdeci">@ CenterCenter</div><div class="ttdoc">Centré dans les deux dimensions.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

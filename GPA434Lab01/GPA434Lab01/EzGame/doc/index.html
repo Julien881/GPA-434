@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EzGame: Bibliothèque EzGame</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="EzGameLogoMedium.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">EzGame
+   </div>
+   <div id="projectbrief">La bibliothèque EzGame permet de créer facilement une application graphique rudimentaire.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Bibliothèque EzGame </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>La bibliothèque <code>EzGame</code> permet de créer facilement une application graphique rudimentaire.</p>
+<p>Ce document contient la documentation de l'<b>I</b>nterface de <b>P</b>rogrammation de l'<b>A</b>pplication (<code>IPA</code> ou <code>API</code> en anglais).</p>
+<p><code>EzGame</code> a été créé avec la bibliothèque <a href="https://www.sfml-dev.org/" target="_blank">SFML</a>.</p>
+<h1><a class="anchor" id="sommary"></a>
+Sommaire</h1>
+<p>En bref, la bibliothèque permet :</p><ul>
+<li>la création d'une application graphique</li>
+<li>de connaître :<ul>
+<li>l'état du clavier</li>
+<li>le temps écoulé</li>
+</ul>
+</li>
+<li>d'afficher à l'écran :<ul>
+<li>une couleur uniforme sur toute la surface</li>
+<li>des textes</li>
+<li>des cercles</li>
+</ul>
+</li>
+<li>d'exécuter une boucle principale personnalisée - tourne en boucle et appelle deux fonctions de contrôle :<ol type="1">
+<li>produire la logique de l'application selon le temps écoulé et l'état du clavier</li>
+<li>réaliser l'affichage requis</li>
+</ol>
+</li>
+</ul>
+<p><code>EzGame</code> a été conçue pour créer facilement une application graphique rudimentaire. L'objectif n'étant pas de passer beaucoup de temps à apprendre un outil complexe ou de mettre l'emphase sur les aspects cosmétiques.</p>
+<h1><a class="anchor" id="architecture"></a>
+Architecture</h1>
+<p><code>EzGame</code> est divisé en 3 parties conceptuelles :</p><ul>
+<li>le noyau de l'application est constitué de 4 classes :<ul>
+<li><a class="el" href="classezgame_1_1_application.html" title="Constitue l&#39;application elle-même.">ezgame::Application</a> : le moteur principal</li>
+<li><a class="el" href="classezgame_1_1_keyboard.html" title="Classe permettant de connaître l&#39;état du clavier.">ezgame::Keyboard</a> : le clavier</li>
+<li><a class="el" href="classezgame_1_1_timer.html" title="Classe utilitaire donnant accès à des métriques de temps écoulé.">ezgame::Timer</a> : une métrique de temps</li>
+<li><a class="el" href="classezgame_1_1_screen.html" title="Classe permettant de dessiner à l&#39;écran.">ezgame::Screen</a> : l'écran</li>
+</ul>
+</li>
+<li>le moteur graphique est constitué de<ul>
+<li>quatre classes :<ul>
+<li><a class="el" href="classezgame_1_1_vect2d.html" title="Classe modélisant un vecteur bidimensionnel dans un espace euclidien.">ezgame::Vect2d</a> : un vecteur mathématique en 2d (utilisé aussi comme position)</li>
+<li><a class="el" href="classezgame_1_1_color.html" title="Classe représentant une couleur.">ezgame::Color</a> : une couleur</li>
+<li><a class="el" href="classezgame_1_1_text.html" title="Classe représentant un texte.">ezgame::Text</a> : un texte</li>
+<li><a class="el" href="classezgame_1_1_circle.html" title="Classe représentant un cercle.">ezgame::Circle</a> : un cercle</li>
+</ul>
+</li>
+<li>une énumération :<ul>
+<li><a class="el" href="namespaceezgame.html#afd3624324e5bdf9ff2084d6112ad8a75" title="Définit l&#39;alignement des objets graphiques.">ezgame::Alignment</a> : la disposition relative d'un objet à afficher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>une classe utilitaire :<ul>
+<li><a class="el" href="classezgame_1_1_random.html" title="Classe statique générant des valeurs aléatoires de divers types.">ezgame::Random</a> : outil de génération de valeurs aléatoires</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="how_to"></a>
+Utilisation</h1>
+<p>L'utilisation de <code>EzGame</code> est basée sur le principe où le développeur donne un moteur de jeu à l'application. Le moteur de jeu attendu par la bibliothèque doit rigoureusement correspondre au concept <a class="el" href="conceptezgame_1_1_game_engine_requirements.html" title="Ce concept vérifie qu&#39;une classe satisfait aux exigences nécessaires afin de servir de moteur de jeu ...">ezgame::GameEngineRequirements</a>. En bref, ce concept stipule que le moteur doit fournir six fonctions avec exactement les mêmes :</p><ul>
+<li>noms</li>
+<li>signatures</li>
+<li>valeurs de retour</li>
+</ul>
+<p>Un développement avec <code>EzGame</code> se fait en 4 grandes étapes :</p><ol type="1">
+<li>créer son moteur de jeu</li>
+<li>créer une fonction WinMain</li>
+<li>instancier un objet <a class="el" href="classezgame_1_1_application.html" title="Constitue l&#39;application elle-même.">ezgame::Application</a></li>
+<li>exécuter la fonction <a class="el" href="classezgame_1_1_application.html#a9d3eff63e01513ea4b63924d9adb2eb6" title="Exécute l&#39;application en utilisant le moteur donné en argument template.">ezgame::Application::run</a> en lui passant le moteur de jeu créé précédemment (attention, cette fonction est un <code>template</code>)</li>
+</ol>
+<p>Voici un exemple de code présentant une utilisation minimale de <code>EzGame</code>. La classe développée se nomme <code>GameEngine</code>.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;EzGame&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Déclaration et définition du moteur de jeu</span></div>
+<div class="line"><span class="comment">// - affiche un texte et un cercle à l&#39;écran</span></div>
+<div class="line"><span class="comment">// - en appuyant sur la barre d&#39;espacement, le cercle se déplace aléatoirement</span></div>
+<div class="line"><span class="comment">// - en appuyant sur la touche d&#39;échappement, l&#39;application termine</span></div>
+<div class="line"><span class="keyword">class </span>GameEngine {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    GameEngine() </div>
+<div class="line">       : mText(<span class="stringliteral">&quot;EzGame&quot;</span>, 36.0f, <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Vect2d(400.0f, 100.0f), <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Color(0.15f, 0.25f, 1.0f), <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Alignment::CenterCenter)</div>
+<div class="line">       , mCircle(50.0f, <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Vect2d(400.0f, 300.0f), <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Color::Yellow, <a class="code hl_namespace" href="namespaceezgame.html">ezgame</a>::Color::Red, 5.0f)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Les 6 fonctions répondant aux exigences du concept ]&gt;-----------------------------------------+</span></div>
+<div class="line">                                                                                        <span class="comment">//           |</span></div>
+<div class="line">    <span class="keywordtype">float</span> width()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 800.0f; }                                              <span class="comment">// &lt;-----[1]-+</span></div>
+<div class="line">    <span class="keywordtype">float</span> height()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 600.0f; }                                             <span class="comment">// &lt;-----[2]-+</span></div>
+<div class="line">    std::string title()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;EzGame demo&quot;</span>; }                                 <span class="comment">// &lt;-----[3]-+</span></div>
+<div class="line">    std::string iconFileName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }                                     <span class="comment">// &lt;-----[4]-+</span></div>
+<div class="line">                                                                                        <span class="comment">//           |</span></div>
+<div class="line">    <span class="keywordtype">bool</span> processEvents(<a class="code hl_class" href="classezgame_1_1_keyboard.html">ezgame::Keyboard</a> <span class="keyword">const</span>&amp; keyboard, <a class="code hl_class" href="classezgame_1_1_timer.html">ezgame::Timer</a> <span class="keyword">const</span>&amp; timer) {  <span class="comment">// &lt;---+-[5]-+</span></div>
+<div class="line">       <span class="keywordflow">if</span> (keyboard.<a class="code hl_function" href="classezgame_1_1_keyboard.html#acc594a2437072f5cd0712b6a934db58e">isKeyPressed</a>(<a class="code hl_enumvalue" href="classezgame_1_1_keyboard.html#aad095407733e3c5b856770504f988a85ad511f8439ecde36647437fbba67a4394">ezgame::Keyboard::Key::Space</a>)) {                       <span class="comment">//     |     |</span></div>
+<div class="line">           mCircle.move(<a class="code hl_function" href="classezgame_1_1_vect2d.html#a43044bc065e1c230ae3b873e39a7ccd8">ezgame::Vect2d::fromRandomized</a>() * 2.5f);                       <span class="comment">//     |     | </span></div>
+<div class="line">       }                                                                                <span class="comment">//     |     |</span></div>
+<div class="line">       <span class="keywordflow">return</span> !keyboard.<a class="code hl_function" href="classezgame_1_1_keyboard.html#acc594a2437072f5cd0712b6a934db58e">isKeyPressed</a>(<a class="code hl_enumvalue" href="classezgame_1_1_keyboard.html#aad095407733e3c5b856770504f988a85a013ec032d3460d4be4431c6ab1f8f224">ezgame::Keyboard::Key::Escape</a>);                    <span class="comment">//     |     |</span></div>
+<div class="line">    }                                                                                   <span class="comment">// ----+     |</span></div>
+<div class="line">                                                                                        <span class="comment">//           |</span></div>
+<div class="line">    <span class="keywordtype">void</span> processDisplay(<a class="code hl_class" href="classezgame_1_1_screen.html">ezgame::Screen</a>&amp; screen) {                                       <span class="comment">// &lt;---+-[6]-+</span></div>
+<div class="line">       screen.<a class="code hl_function" href="classezgame_1_1_screen.html#ab53e91fea07d8723a9d45e213ce27ec5">clear</a>();                                                                  <span class="comment">//     |</span></div>
+<div class="line">       screen.<a class="code hl_function" href="classezgame_1_1_screen.html#a4cc80ad5918f68aad58c39305a1330aa">draw</a>(mText);                                                              <span class="comment">//     |</span></div>
+<div class="line">       screen.<a class="code hl_function" href="classezgame_1_1_screen.html#a4cc80ad5918f68aad58c39305a1330aa">draw</a>(mCircle);                                                            <span class="comment">//     |</span></div>
+<div class="line">    }                                                                                   <span class="comment">// ----+</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code hl_class" href="classezgame_1_1_text.html">ezgame::Text</a> mText;</div>
+<div class="line">    <a class="code hl_class" href="classezgame_1_1_circle.html">ezgame::Circle</a> mCircle;</div>
+<div class="line">    </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Point d&#39;entrée du programme</span></div>
+<div class="line"><span class="keywordtype">int</span> WinMain()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="classezgame_1_1_application.html">ezgame::Application</a> app;    <span class="comment">// &lt; instantiation d&#39;objet de la classe ezgame::Application</span></div>
+<div class="line">    app.<a class="code hl_function" href="classezgame_1_1_application.html#a9d3eff63e01513ea4b63924d9adb2eb6">run</a>&lt;GameEngine&gt;();      <span class="comment">// &lt; exécution de la fonction run -&gt; démarre la boucle principale</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassezgame_1_1_application_html"><div class="ttname"><a href="classezgame_1_1_application.html">ezgame::Application</a></div><div class="ttdoc">Constitue l'application elle-même.</div><div class="ttdef"><b>Definition</b> Application.h:116</div></div>
+<div class="ttc" id="aclassezgame_1_1_application_html_a9d3eff63e01513ea4b63924d9adb2eb6"><div class="ttname"><a href="classezgame_1_1_application.html#a9d3eff63e01513ea4b63924d9adb2eb6">ezgame::Application::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Exécute l'application en utilisant le moteur donné en argument template.</div></div>
+<div class="ttc" id="aclassezgame_1_1_circle_html"><div class="ttname"><a href="classezgame_1_1_circle.html">ezgame::Circle</a></div><div class="ttdoc">Classe représentant un cercle.</div><div class="ttdef"><b>Definition</b> Circle.h:29</div></div>
+<div class="ttc" id="aclassezgame_1_1_keyboard_html"><div class="ttname"><a href="classezgame_1_1_keyboard.html">ezgame::Keyboard</a></div><div class="ttdoc">Classe permettant de connaître l'état du clavier.</div><div class="ttdef"><b>Definition</b> Keyboard.h:53</div></div>
+<div class="ttc" id="aclassezgame_1_1_keyboard_html_aad095407733e3c5b856770504f988a85a013ec032d3460d4be4431c6ab1f8f224"><div class="ttname"><a href="classezgame_1_1_keyboard.html#aad095407733e3c5b856770504f988a85a013ec032d3460d4be4431c6ab1f8f224">ezgame::Keyboard::Key::Escape</a></div><div class="ttdeci">@ Escape</div><div class="ttdoc">Touche d'échappement (escape)</div></div>
+<div class="ttc" id="aclassezgame_1_1_keyboard_html_aad095407733e3c5b856770504f988a85ad511f8439ecde36647437fbba67a4394"><div class="ttname"><a href="classezgame_1_1_keyboard.html#aad095407733e3c5b856770504f988a85ad511f8439ecde36647437fbba67a4394">ezgame::Keyboard::Key::Space</a></div><div class="ttdeci">@ Space</div><div class="ttdoc">&amp;#160; &amp;#160; &amp;#160;&amp;#160;&amp;#160; Barre d'espacement (space)</div></div>
+<div class="ttc" id="aclassezgame_1_1_keyboard_html_acc594a2437072f5cd0712b6a934db58e"><div class="ttname"><a href="classezgame_1_1_keyboard.html#acc594a2437072f5cd0712b6a934db58e">ezgame::Keyboard::isKeyPressed</a></div><div class="ttdeci">bool isKeyPressed(Key key) const</div><div class="ttdoc">Accesseur retournant si une touche est appuyée.</div></div>
+<div class="ttc" id="aclassezgame_1_1_screen_html"><div class="ttname"><a href="classezgame_1_1_screen.html">ezgame::Screen</a></div><div class="ttdoc">Classe permettant de dessiner à l'écran.</div><div class="ttdef"><b>Definition</b> Screen.h:34</div></div>
+<div class="ttc" id="aclassezgame_1_1_screen_html_a4cc80ad5918f68aad58c39305a1330aa"><div class="ttname"><a href="classezgame_1_1_screen.html#a4cc80ad5918f68aad58c39305a1330aa">ezgame::Screen::draw</a></div><div class="ttdeci">void draw(Circle const &amp;circle)</div><div class="ttdoc">Dessine le cercle donné.</div></div>
+<div class="ttc" id="aclassezgame_1_1_screen_html_ab53e91fea07d8723a9d45e213ce27ec5"><div class="ttname"><a href="classezgame_1_1_screen.html#ab53e91fea07d8723a9d45e213ce27ec5">ezgame::Screen::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Rempli l'écran de la couleur noire.</div></div>
+<div class="ttc" id="aclassezgame_1_1_text_html"><div class="ttname"><a href="classezgame_1_1_text.html">ezgame::Text</a></div><div class="ttdoc">Classe représentant un texte.</div><div class="ttdef"><b>Definition</b> Text.h:31</div></div>
+<div class="ttc" id="aclassezgame_1_1_timer_html"><div class="ttname"><a href="classezgame_1_1_timer.html">ezgame::Timer</a></div><div class="ttdoc">Classe utilitaire donnant accès à des métriques de temps écoulé.</div><div class="ttdef"><b>Definition</b> Timer.h:28</div></div>
+<div class="ttc" id="aclassezgame_1_1_vect2d_html_a43044bc065e1c230ae3b873e39a7ccd8"><div class="ttname"><a href="classezgame_1_1_vect2d.html#a43044bc065e1c230ae3b873e39a7ccd8">ezgame::Vect2d::fromRandomized</a></div><div class="ttdeci">static Vect2d fromRandomized()</div><div class="ttdoc">Fonction statique créant un vecteur aléatoire.</div></div>
+<div class="ttc" id="anamespaceezgame_html"><div class="ttname"><a href="namespaceezgame.html">ezgame</a></div><div class="ttdoc">Le namespace ezgame réuni l'ensemble de la librairie EzGame.</div><div class="ttdef"><b>Definition</b> Alignment.h:7</div></div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
