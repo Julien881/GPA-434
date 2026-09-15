@@ -1,4 +1,5 @@
 #include "GameEngine.h"
+#include <Keyboard.h>
 
 // Les 6 fonctions répondant aux exigences du concept
 
@@ -18,4 +19,10 @@ void GameEngine::processDisplay(ezgame::Screen& screen) {
     screen.clear();
     screen.draw(mText);
     screen.draw(mCircle);
+}
+
+bool isAppStillRunning(const std::string pressedKey = "Escape") {
+
+//Keyboard::isKeyPressed()
+
 }
