@@ -145,10 +145,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arena.cpp" />
+    <ClCompile Include="Dome.cpp" />
     <ClCompile Include="DomeSupremacy.cpp" />
     <ClCompile Include="GameEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arena.h" />
+    <ClInclude Include="Dome.h" />
     <ClInclude Include="GameEngine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
